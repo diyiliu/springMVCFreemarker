@@ -15,6 +15,14 @@ compileTestJava {
     targetCompatibility = 1.8
 }
 
+repositories {
+    //mavenLocal()
+    //mavenCentral()
+    maven {
+        url "http://192.168.0.191:9080/repository/maven-central/"
+    }
+}
+
 ext {
     springVersion = '4.2.4.RELEASE'
     freemarkerVersion = '2.3.23'
@@ -25,12 +33,6 @@ ext {
     jacksonVersion = '2.7.3'
     junitVersion = '4.12'
 }
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
-
 dependencies {
     compile(
             // spring
